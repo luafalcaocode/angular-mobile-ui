@@ -1,0 +1,5 @@
+<simple-carousel (carousel)="onLoadCarousel($event)"></simple-carousel>
+<edit-in-form [showEditIcon]="permissaoEdicao" [showDeleteIcon]="permissaoExclusao" [linkEdit]="linkEdicao"
+(onClickDeleteIconEvent)="onClickDeleteIcon($event)"></edit-in-form>
+<simple-list [items]="itemList"></simple-list>
+<full-loading type="spinner" [isLoading]="isLoading" message="" zIndex="100000"></full-loading>

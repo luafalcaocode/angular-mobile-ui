@@ -1,0 +1,10 @@
+:host ::ng-deep .notification-action {
+  position: relative;
+  left: 19px;
+}
+
+.see-more-btn {
+  background: white;
+  color: var(--sky);
+  border: solid 1px var(--sky);
+}

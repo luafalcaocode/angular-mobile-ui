@@ -1,0 +1,7 @@
+<div class="seus-anuncios-container">
+  <div>
+    <h2 class="u-normal highlighted">Seus anúncios:</h2>
+    <card icon="groups" [type]="cardType" [content]="anuncio" (onOpenCardEvent)="onOpen($event)" [isLoading]="isLoading" [hasError]="error" (onReload)="recarregarAnuncios($event)"></card>
+  </div>
+</div>
+

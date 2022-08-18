@@ -1,0 +1,47 @@
+<div [ngSwitch]="type">
+  <div *ngSwitchDefault>
+    <mat-list>
+      <mat-list-item *ngFor="let item of items" (click)="onClickListItem(item)">
+        <mat-icon mat-list-icon>{{item.icon }}</mat-icon>
+        <div mat-line class="u-capitalize">{{ item.title }}</div>
+
+        <div mat-line class="uchiha u-capitalize" *ngIf="item.description == 'Observação'; else itemList">
+          <p class="u-scroll-line">
+            {{ item.description }}
+          </p>
+        </div>
+        <ng-template #itemList>
+          <div class="uchiha u-capitalize">
+            <p class="u-scroll-line">
+              {{ item.description }}
+            </p>
+          </div>
+        </ng-template>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div *ngSwitchCase="'effect'">
+    <mat-list> <!-- matRipple [matRippleColor]="colorRipple" -->
+      <mat-list-item *ngFor="let item of items" (click)="onClickListItem(item)" matRipple [matRippleColor]="colorRipple">
+        <mat-icon mat-list-icon>{{item.icon }}</mat-icon>
+        <div mat-line class="u-capitalize">{{ item.title }}</div>
+
+        <div mat-line class="uchiha u-capitalize" *ngIf="item.description == 'Observação'; else itemList">
+          <p class="u-scroll-line">
+            {{ item.description }}
+          </p>
+        </div>
+        <ng-template #itemList>
+          <div class="uchiha u-capitalize">
+            <p class="u-scroll-line">
+              {{ item.description }}
+            </p>
+          </div>
+        </ng-template>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </div>
+
+</div>

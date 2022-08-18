@@ -1,0 +1,39 @@
+<div>
+  <div>
+    <mat-list>
+      <mat-list-item *ngFor="let item of notificacoes" matRipple [matRippleColor]="colorRipple">
+        <div mat-line>
+          <div class="u-left u-lighter">
+            <span>{{ item.title }}</span>
+          </div>
+          <div class="u-right u-lighter">
+            {{ item.time }}
+          </div>
+        </div>
+
+        <div mat-line>
+          <div class="u-left">
+            <br />
+            <span class="darker">Desaparecido(a): {{ item.name }}</span><br />
+            <span>Cidade: {{ item.city }}</span><br />
+            <span>Estado: {{ item.state }}</span>
+          </div>
+          <!-- <div class="u-right">
+            <button class="button-simple notification-action" mat-fab color="default">
+              <mat-icon class="" aria-hidden="false" aria-label="">more_vert</mat-icon>
+            </button>
+          </div> -->
+        </div>
+
+
+        <div mat-line></div>
+        <div mat-line></div>
+
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
+
+<full-loading type="spinner" [isLoading]="isLoading" zIndex="100000"></full-loading>
+

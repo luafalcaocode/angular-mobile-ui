@@ -1,0 +1,16 @@
+:host ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content {
+  height: auto !important;
+  padding-bottom: 4px;
+  padding-top: 20px;
+}
+
+:host ::ng-deep .mat-list,
+:host ::ng-deep .mat-list-base  {
+  padding-top: 13px !important;
+}
+
+:host ::ng-deep .mat-list-item  {
+  height: auto !important;
+  // min-height: 72px;
+}
+

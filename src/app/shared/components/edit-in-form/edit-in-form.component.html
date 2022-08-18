@@ -1,0 +1,8 @@
+<div class="edit-in-form">
+  <button color="default" mat-fab class="button-simple edition" *ngIf="showEditIcon" (click)="openEditScreen()">
+    <mat-icon id="headerIcon" class="silvermine" aria-hidden="false" aria-label="usuario">edit</mat-icon>
+  </button>
+  <button color="default" mat-fab class="button-simple deletion" *ngIf="showDeleteIcon" (click)="onClickDeleteIcon()">
+    <mat-icon id="headerIcon" class="silvermine" aria-hidden="false" aria-label="usuario">delete</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,54 @@
+<mat-grid-list cols="1" rowHeight="90px" gutterSize="20px">
+  <mat-grid-tile>
+    <div class="logo-container">
+      <mat-icon aria-hidden="false" aria-label="usuario" class="logo-usuario">vpn_key</mat-icon>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="login-descricao-container">
+      <span class="highlighted sky">Em instantes você receberá um código de verificação em seu seu e-mail para informar abaixo:
+      </span>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div class="form-verification-container">
+  <form class="example-form" autocomplete="off" #form="ngForm" (ngSubmit)="onSubmit(form)" autocomplete="off">
+    <mat-form-field appearance="fill" class="verification-code-field">
+      <input matInput type="text" name="codigo" ngModel #codigo_digito1 (input)="onUpdateCodeField(1, codigo_digito1.value)" (paste)="onPasteListener($event)" maxlength="1" class="verification-code">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="verification-code-field">
+      <input matInput type="text" name="codigo" ngModel #codigo_digito2 (input)="onUpdateCodeField(2, codigo_digito2.value)" (paste)="onPasteListener($event)" maxlength="1" class="verification-code">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="verification-code-field">
+      <input matInput type="text" name="codigo" ngModel #codigo_digito3 (input)="onUpdateCodeField(3, codigo_digito3.value)" (paste)="onPasteListener($event)" maxlength="1" class="verification-code">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="verification-code-field">
+      <input matInput type="text" name="codigo" ngModel #codigo_digito4 (input)="onUpdateCodeField(4, codigo_digito4.value)" (paste)="onPasteListener($event)" maxlength="1" class="verification-code">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="verification-code-field">
+      <input matInput type="text" name="codigo" ngModel #codigo_digito5 (input)="onUpdateCodeField(5, codigo_digito5.value)" (paste)="onPasteListener($event)" maxlength="1" class="verification-code">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="verification-code-field">
+      <input matInput type="text" name="codigo" ngModel #codigo_digito6 (input)="onUpdateCodeField(6, codigo_digito6.value)" (paste)="onPasteListener($event)" maxlength="1" class="verification-code">
+    </mat-form-field>
+
+  </form>
+</div>
+
+<div class="reenviar-codigo">
+  <h3>Não recebeu o código de verificação?</h3>
+  <div>
+    <button color="default" mat-fab class="button-simple" (click)="reenviarCodigoDeVerificacaoPorEmail()"  *ngIf="!isLoading">
+      <mat-icon class="sky" aria-hidden="false" aria-label="reenviar">refresh</mat-icon>
+    </button> <br />
+    <mini-loading [isLoading]="isLoading" *ngIf="isLoading"></mini-loading>
+  </div>
+</div>
+
+

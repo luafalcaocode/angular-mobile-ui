@@ -1,0 +1,33 @@
+<!-- <home-localizacao-atual></home-localizacao-atual> -->
+<home-welcome></home-welcome>
+
+
+
+<!-- Seus Anúncios -->
+<div>
+  <div *ngIf="anuncio.quantidade <= 0 || !usuarioEstaLogado; else anunciosCadastrados">
+    <home-seus-anuncios cardType="add" titleCard="Você ainda não possui anúncios" [isLoading]="isLoading"></home-seus-anuncios>
+  </div>
+  <ng-template #anunciosCadastrados>
+    <home-seus-anuncios [cardType]="cardType" [anuncio]="anuncio" [isLoading]="isLoading" [error]="error" (reload)="recarregarAnuncios($event)"></home-seus-anuncios>
+  </ng-template>
+</div>
+
+
+<!-- Catálogo de Desaparecidos -->
+<div class="container-ultimos-desaparecidos">
+  <h2 class="highlighted">Catálogo de desaparecidos:</h2>
+  <mat-spinner color="warn" class="u-margin-auto" diameter="30" *ngIf="isLoadingCarousel"></mat-spinner>
+  <div (click)="onClickCarousel()" *ngIf="!isLoadingCarousel">
+    <simple-carousel [images]="this.carouselImages" [objectFit]="'cover'" cellsToShow="3" height="100" hasDots="false" loop="true" autoplay="true"></simple-carousel>
+  </div>
+  <div *ngIf="this.carouselImages.length == 0 && !isLoadingCarousel">
+    <span>Não há anúncios cadastrados no catálogo</span>
+  </div>
+</div>
+
+<!-- Estatística -->
+<home-estatisticas [isLoading]="isLoading" [estatistica]="estatistica"></home-estatisticas>
+
+<!-- <full-loading type="spinner" [isLoading]="isLoading" [message]="" zIndex="100000"></full-loading> -->
+

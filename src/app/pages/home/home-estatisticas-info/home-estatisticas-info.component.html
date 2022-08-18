@@ -1,0 +1,16 @@
+<ngx-charts-bar-vertical *ngIf="!isLoading"
+    [view]="[this.width, this.height]"
+    [results]="estatisticasDesaparecidos"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [legend]="false"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxis]="true"
+    [yAxis]="true"
+    [gradient]="true"
+    [fitContainer]="true">
+</ngx-charts-bar-vertical>
+
+<full-loading type="spinner" [isLoading]="isLoading" [message]="" zIndex="100000"></full-loading>
+

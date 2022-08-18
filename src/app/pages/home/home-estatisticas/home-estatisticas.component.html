@@ -1,0 +1,10 @@
+<div class="estatisticas-container">
+  <div>
+    <h2 class="u-normal highlighted">Estatísticas:</h2>
+
+    <div class="estatistica-card-group">
+      <card icon="image_search" type="info" [content]="estatistica" (onOpenCardEvent)="quandoUsuarioClicarEmVerEstatistica($event)" [route]="'home/estatisticas'" [isLoading]="isLoading"></card>
+    </div>
+  </div>
+</div>
+
