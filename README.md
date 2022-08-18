@@ -5,5 +5,5 @@ Este repositório é destinada a armazenar uma aplicação web com design respon
 
 + Angular / Angular Material
 + HTML5
-+ CSS3/SASS
++ CSS3
 + JavaScript
