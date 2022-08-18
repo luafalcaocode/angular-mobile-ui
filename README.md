@@ -1,2 +1,2 @@
 # angular-mobile-ui
-This repo is intend to host angular user interface for 
+Este repositório é destinada a armazenar uma aplicação web com design responsivo feita para dispostivos móveis que rodam Android e iOS. 
