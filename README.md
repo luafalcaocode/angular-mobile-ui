@@ -17,4 +17,8 @@ Este repositório é destinada a armazenar uma aplicação web com design respon
 + navegue na pasta do projeto e digite npm install para instalar as dependências
 + execute o comando **ng serve --o** para abrir a aplicação em um navegador
 
+## Visualizando o projeto em produção
+
+acesse https://luafalcao.com/app/reencontre/
+
 Obs.: use o Google Chrome ou Safari e diminua a resolução do browser para simular um smartphone para melhor visualização
